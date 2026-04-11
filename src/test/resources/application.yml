@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+
+  flyway:
+    enabled: false
+
+jwt:
+  secret: 3c6e0b8a9c15224a8228b9a98ca1531d3c6e0b8a9c15224a8228b9a98ca1531d
+  expiration: 86400000
+
+logging:
+  level:
+    com.sanele.workouttracker: WARN
